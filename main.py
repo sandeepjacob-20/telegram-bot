@@ -9,7 +9,7 @@ from telegram.ext import (
 )
 
 # Replace 'YOUR_API_TOKEN' with your bot's API token
-API_TOKEN = os.getenv('TELEGRAM_API_TOKEN')
+API_TOKEN = os.getenv("TELEGRAM_API_TOKEN")
 PASSWORD = "sandeep"  # Set your password here
 
 # Conversation states
@@ -55,7 +55,7 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # Main function
 def main():
     application = Application.builder().token(API_TOKEN).build()
-
+    print("application running .......")
     # Define the conversation handler
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler("start", start)],
